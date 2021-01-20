@@ -1,3 +1,4 @@
+import { MainRoute } from "./components/routes";
 import Background from "./assets/background.png";
 
 var backgroundStyle = {
@@ -10,7 +11,11 @@ var backgroundStyle = {
 };
 
 function App() {
-    return <div className="App" style={backgroundStyle}></div>;
+    return (
+        <div className="App" style={backgroundStyle}>
+            <MainRoute />
+        </div>
+    );
 }
 
 export default App;
