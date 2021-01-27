@@ -12,8 +12,7 @@ function SPBody(props) {
     const btnClassName =
         "text-5xl bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-pink-500 hover:to-yellow-500 text-yellow-300 hover:text-white py-4 px-12 rounded-full font-sans";
 
-    //TODO Change link
-    const linkTo = "/";
+    const linkTo = "/main";
     const btnText = "START";
 
     return (
