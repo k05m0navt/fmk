@@ -1,4 +1,5 @@
 import { NavBar } from "../molecules";
+import { MPBody } from "../organisms";
 
 function MainPage() {
     const className = "";
@@ -6,6 +7,7 @@ function MainPage() {
     return (
         <div className={className}>
             <NavBar />
+            <MPBody />
         </div>
     );
 }
