@@ -4,10 +4,12 @@ import { MPBody } from "../organisms";
 function MainPage() {
     const className = "";
 
+    const mpbClassName = "content-center justify-center";
+
     return (
         <div className={className}>
             <NavBar />
-            <MPBody />
+            <MPBody className={mpbClassName} />
         </div>
     );
 }
