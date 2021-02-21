@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
+import { PictureButton } from "../atoms";
+import condom from "../../assets/buttons/png/condom.png";
+import ring from "../../assets/buttons/png/ring.png";
+import gibbet from "../../assets/buttons/png/gibbet.png";
 
 function MPBody(props) {
     const className = props.className;
 
-    const imgsClassName = "flex flex-row justify-evenly mt-16";
-    const imClassName = "object-fill h-full w-88";
+    const imgsClassName = "flex flex-row justify-evenly mt-16 mx-64";
+    const imClassName = "w-88 rounded-lg";
+
+    const btnsClassName = "flex flex-row justify-evenly mt-5";
+    const btnClassName = "";
 
     const [threePhotos, setThreePhotos] = useState(null);
     const serverAddr = "http://0.0.0.0:8000/";
@@ -18,19 +25,34 @@ function MPBody(props) {
             });
     }, [serverAddr, getThreePhotos]);
 
-    console.log(threePhotos);
     return (
         <div className={className}>
             <div className={imgsClassName}>
                 {threePhotos
                     ? threePhotos.map((person) => {
                           return (
-                              <img
-                                  className={imClassName}
-                                  key={person["id"]}
-                                  src={serverAddr + person["photo_m"]}
-                                  alt={person["first_name"]}
-                              />
+                              <div>
+                                  <img
+                                      className={imClassName}
+                                      key={person["id"]}
+                                      src={serverAddr + person["photo_m"]}
+                                      alt={person["first_name"]}
+                                  />
+                                  <div className={btnsClassName}>
+                                      <PictureButton
+                                          className={btnClassName}
+                                          image={condom}
+                                      />
+                                      <PictureButton
+                                          className={btnClassName}
+                                          image={ring}
+                                      />
+                                      <PictureButton
+                                          className={btnClassName}
+                                          image={gibbet}
+                                      />
+                                  </div>
+                              </div>
                           );
                       })
                     : null}
