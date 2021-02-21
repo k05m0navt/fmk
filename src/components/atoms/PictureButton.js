@@ -7,7 +7,7 @@ function PictureButton(props) {
         <div className={className}>
             <button>
                 <img
-                    className="hidden lg:block h-28 w-auto"
+                    className="hidden lg:block h-24 w-auto"
                     src={image}
                     alt="Workflow"
                     onClick={onClick}
