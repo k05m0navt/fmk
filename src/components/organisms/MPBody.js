@@ -38,7 +38,7 @@ function MPBody(props) {
                                       src={serverAddr + person["photo_m"]}
                                       alt={person["first_name"]}
                                   />
-                                  <div className={btnsClassName}>
+                                  <div className={btnsClassName}>et
                                       <PictureButton
                                           className={btnClassName}
                                           image={condom}

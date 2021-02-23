@@ -35,7 +35,7 @@ function NavBar() {
                                         Game
                                     </p>
                                 </Link>
-                                <Link to="/main">
+                                <Link to="/top">
                                     <p className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">
                                         Top
                                     </p>

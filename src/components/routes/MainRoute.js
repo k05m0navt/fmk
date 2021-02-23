@@ -4,7 +4,7 @@ import {
     Route,
     Redirect,
 } from "react-router-dom";
-import { StartPage, MainPage } from "../pages";
+import { StartPage, MainPage, TopPage } from "../pages";
 
 function MainRoute() {
     return (
@@ -18,6 +18,9 @@ function MainRoute() {
                 </Route>
                 <Route path="/main">
                     <MainPage />
+                </Route>
+                <Route path="/top">
+                    <TopPage />
                 </Route>
             </Switch>
         </Router>
