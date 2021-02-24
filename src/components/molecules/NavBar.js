@@ -29,7 +29,6 @@ function NavBar() {
                         </div>
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4">
-                                {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                                 <Link to="/main">
                                     <p className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">
                                         Game
@@ -46,6 +45,9 @@ function NavBar() {
                                     </p>
                                 </Link>
                             </div>
+                        </div>
+                        <div className="flex w-full text-white text-2xl font-medium space-x-4 py-2 justify-end">
+                            <p>Innopolis</p>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>

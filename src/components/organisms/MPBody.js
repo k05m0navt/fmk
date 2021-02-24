@@ -7,7 +7,7 @@ import gibbet from "../../assets/buttons/png/gibbet.png";
 function MPBody(props) {
     const className = props.className;
 
-    const imgsClassName = "flex flex-row justify-evenly mt-16 mx-64";
+    const imgsClassName = "flex flex-row justify-evenly mt-12 mx-64";
     const imClassName = "w-88 rounded-lg";
 
     const btnsClassName = "flex flex-row justify-evenly mt-5";
@@ -15,7 +15,7 @@ function MPBody(props) {
 
     const btn2ClassName =
         "text-3xl bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-pink-500 hover:to-yellow-500 text-yellow-300 hover:text-white py-4 px-12 rounded-full font-sans";
-    const sbClassName = "flex justify-center mt-4";
+    const sbClassName = "flex justify-center mt-6";
     const btn2Text = "Submit";
 
     const [threePhotos, setThreePhotos] = useState(null);
@@ -43,7 +43,7 @@ function MPBody(props) {
                                   <img
                                       className={imClassName}
                                       key={person["id"]}
-                                      src={serverAddr + person["photo_m"]}
+                                      src={person["photo_m"]}
                                       alt={person["first_name"]}
                                   />
                                   <div className={btnsClassName}>

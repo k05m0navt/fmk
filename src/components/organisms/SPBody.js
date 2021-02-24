@@ -1,11 +1,10 @@
-import { Text, LinkButton } from "../atoms";
+import { LinkButton } from "../atoms";
 import maintext from "../../assets/maintextsvg.svg";
 
 function SPBody(props) {
     const className = props.className;
 
-    const textClassName =
-        "w-320 text-3xl text-yellow-300 font-sans whitespace-normal";
+    const textClassName = "w-3/5";
 
     const lbClassName = "mt-16";
     const btnClassName =
@@ -16,7 +15,7 @@ function SPBody(props) {
 
     return (
         <div className={className}>
-            <img className={textClassName} src={maintext} />
+            <img className={textClassName} src={maintext} alt="" />
             <LinkButton
                 className={lbClassName}
                 linkTo={linkTo}

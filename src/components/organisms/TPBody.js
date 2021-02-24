@@ -8,7 +8,7 @@ function TPBody(props) {
     const className = props.className;
 
     const imClassName = "w-88 rounded-lg";
-    const imgsClassName = "flex flex-row justify-evenly mt-16 mx-64";
+    const imgsClassName = "flex flex-row justify-evenly mt-12 mx-64";
 
     const btnClassName = "flex justify-center mt-5";
 
@@ -34,7 +34,7 @@ function TPBody(props) {
                         <img
                             className={imClassName}
                             key={threePhotos["f_top"]["id"]}
-                            src={serverAddr + threePhotos["f_top"]["photo_m"]}
+                            src={threePhotos["f_top"]["photo_m"]}
                             alt={threePhotos["f_top"]["first_name"]}
                         />
                         <PictureButton
@@ -46,7 +46,7 @@ function TPBody(props) {
                         <img
                             className={imClassName}
                             key={threePhotos["m_top"]["id"]}
-                            src={serverAddr + threePhotos["m_top"]["photo_m"]}
+                            src={threePhotos["m_top"]["photo_m"]}
                             alt={threePhotos["m_top"]["first_name"]}
                         />
                         <PictureButton className={btnClassName} image={ring} />
@@ -55,7 +55,7 @@ function TPBody(props) {
                         <img
                             className={imClassName}
                             key={threePhotos["k_top"]["id"]}
-                            src={serverAddr + threePhotos["k_top"]["photo_m"]}
+                            src={threePhotos["k_top"]["photo_m"]}
                             alt={threePhotos["k_top"]["first_name"]}
                         />
                         <PictureButton
