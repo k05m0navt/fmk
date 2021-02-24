@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { PictureButton, SubmitButton } from "../atoms";
-import condom from "../../assets/buttons/png/condom.png";
-import ring from "../../assets/buttons/png/ring.png";
-import gibbet from "../../assets/buttons/png/gibbet.png";
+import condom from "../../assets/buttons/svg/condom.svg";
+import condom_gray from "../../assets/buttons/svg/condom.svg";
+import ring from "../../assets/buttons/svg/ring.svg";
+import ring_gray from "../../assets/buttons/svg/ring.svg";
+import gibbet from "../../assets/buttons/svg/gibbet.svg";
+import gibbet_gray from "../../assets/buttons/svg/gibbet.svg";
 
 function MPBody(props) {
     const className = props.className;
@@ -22,6 +25,8 @@ function MPBody(props) {
     const serverAddr = "http://0.0.0.0:8000/";
     const getThreePhotos = "api/get_triplet/";
 
+    const [submitData, setSubmitData] = useState({ 1: null, 2: null, 3: null });
+
     useEffect(() => {
         fetch(serverAddr + getThreePhotos)
             .then((response) => response.json())
@@ -32,6 +37,10 @@ function MPBody(props) {
                 setThreePhotos(json[0]["triplet"]);
             });
     }, [serverAddr, getThreePhotos]);
+
+    useEffect(() => {
+        console.log(submitData);
+    }, [submitData]);
 
     return (
         <div className={className}>
@@ -51,16 +60,25 @@ function MPBody(props) {
                                           className={btnClassName}
                                           image={condom}
                                           number={person.number}
+                                          action="fuck"
+                                          data={submitData}
+                                          handleClick={setSubmitData}
                                       />
                                       <PictureButton
                                           className={btnClassName}
                                           image={ring}
                                           number={person.number}
+                                          action="marry"
+                                          data={submitData}
+                                          handleClick={setSubmitData}
                                       />
                                       <PictureButton
                                           className={btnClassName}
                                           image={gibbet}
                                           number={person.number}
+                                          action="kill"
+                                          data={submitData}
+                                          handleClick={setSubmitData}
                                       />
                                   </div>
                               </div>

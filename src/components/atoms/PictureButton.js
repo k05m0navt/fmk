@@ -1,9 +1,7 @@
-import { useState } from "react";
-
 function PictureButton(props) {
     const className = props.className;
     const image = props.image;
-    const onClick = props.onClick;
+    const handleClick = props.handleClick;
     const number = props.number;
 
     return (
@@ -13,7 +11,13 @@ function PictureButton(props) {
                     className="hidden lg:block h-24 w-auto"
                     src={image}
                     alt="Workflow"
-                    onClick={() => onClick}
+                    onClick={() => {
+                        handleClick((prev) => {
+                            const jsonObj = { ...prev };
+                            jsonObj[number] = props.action;
+                            return jsonObj;
+                        });
+                    }}
                 />
             </button>
         </div>
