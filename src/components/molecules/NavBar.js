@@ -39,7 +39,7 @@ function NavBar() {
                                         Top
                                     </p>
                                 </Link>
-                                <Link to="/main">
+                                <Link to="/faq">
                                     <p className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">
                                         F.A.Q.
                                     </p>
